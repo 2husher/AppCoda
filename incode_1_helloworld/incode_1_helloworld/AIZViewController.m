@@ -7,6 +7,7 @@
 //
 
 #import "AIZViewController.h"
+#import "AIZViewController+AIZInterface.h"
 
 @interface AIZViewController ()
 
@@ -17,13 +18,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    [self addButton];
 }
 
-- (void)didReceiveMemoryWarning
+
+
+- (void)showMessage
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"My First App"
+                                                    message:@"Hello, World!"
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles: nil];
+    [alert show];
 }
 
 @end

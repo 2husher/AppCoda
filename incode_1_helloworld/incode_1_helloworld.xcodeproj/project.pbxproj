@@ -13,6 +13,7 @@
 		17E445191BF5345100B994F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17E445181BF5345100B994F8 /* Images.xcassets */; };
 		17E4451C1BF5345100B994F8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17E4451A1BF5345100B994F8 /* LaunchScreen.xib */; };
 		17E445281BF5345100B994F8 /* incode_1_helloworldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E445271BF5345100B994F8 /* incode_1_helloworldTests.m */; };
+		17E445331BF5383600B994F8 /* AIZViewController+AIZInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E445321BF5383600B994F8 /* AIZViewController+AIZInterface.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		17E445211BF5345100B994F8 /* incode_1_helloworldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = incode_1_helloworldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E445261BF5345100B994F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E445271BF5345100B994F8 /* incode_1_helloworldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = incode_1_helloworldTests.m; sourceTree = "<group>"; };
+		17E445311BF5383600B994F8 /* AIZViewController+AIZInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AIZViewController+AIZInterface.h"; sourceTree = "<group>"; };
+		17E445321BF5383600B994F8 /* AIZViewController+AIZInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AIZViewController+AIZInterface.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				17E445181BF5345100B994F8 /* Images.xcassets */,
 				17E4451A1BF5345100B994F8 /* LaunchScreen.xib */,
 				17E4450B1BF5345100B994F8 /* Supporting Files */,
+				17E445311BF5383600B994F8 /* AIZViewController+AIZInterface.h */,
+				17E445321BF5383600B994F8 /* AIZViewController+AIZInterface.m */,
 			);
 			path = incode_1_helloworld;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17E445331BF5383600B994F8 /* AIZViewController+AIZInterface.m in Sources */,
 				17E445141BF5345100B994F8 /* AIZViewController.m in Sources */,
 				17E445111BF5345100B994F8 /* AIZAppDelegate.m in Sources */,
 				17E4450E1BF5345100B994F8 /* main.m in Sources */,

@@ -10,6 +10,7 @@
 
 @interface AIZViewController : UIViewController
 
+- (void)showMessage;
 
 @end
 
