@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		174AE9341B9A2A0F007725BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174AE9331B9A2A0F007725BF /* Foundation.framework */; };
+		174AE9361B9A2A0F007725BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174AE9351B9A2A0F007725BF /* CoreGraphics.framework */; };
+		174AE9381B9A2A0F007725BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174AE9371B9A2A0F007725BF /* UIKit.framework */; };
+		174AE93E1B9A2A0F007725BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 174AE93C1B9A2A0F007725BF /* InfoPlist.strings */; };
+		174AE9401B9A2A0F007725BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 174AE93F1B9A2A0F007725BF /* main.m */; };
+		174AE9441B9A2A0F007725BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 174AE9431B9A2A0F007725BF /* AppDelegate.m */; };
+		174AE9461B9A2A0F007725BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174AE9451B9A2A0F007725BF /* Images.xcassets */; };
+		174AE94D1B9A2A10007725BF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174AE94C1B9A2A10007725BF /* XCTest.framework */; };
+		174AE94E1B9A2A10007725BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174AE9331B9A2A0F007725BF /* Foundation.framework */; };
+		174AE94F1B9A2A10007725BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174AE9371B9A2A0F007725BF /* UIKit.framework */; };
+		174AE9571B9A2A10007725BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 174AE9551B9A2A10007725BF /* InfoPlist.strings */; };
+		174AE9591B9A2A10007725BF /* beg_20_iCloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 174AE9581B9A2A10007725BF /* beg_20_iCloudTests.m */; };
+		174AE9631B9A2BFA007725BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174AE9621B9A2BFA007725BF /* Main.storyboard */; };
+		174AE9691B9A2FD6007725BF /* NoteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 174AE9681B9A2FD6007725BF /* NoteListViewController.m */; };
+		174AE96C1B9A30CB007725BF /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 174AE96B1B9A30CB007725BF /* AddNoteViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		174AE9501B9A2A10007725BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 174AE9281B9A2A0F007725BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 174AE92F1B9A2A0F007725BF;
+			remoteInfo = beg_20_iCloud;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		174AE9301B9A2A0F007725BF /* beg_20_iCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beg_20_iCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		174AE9331B9A2A0F007725BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		174AE9351B9A2A0F007725BF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		174AE9371B9A2A0F007725BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		174AE93B1B9A2A0F007725BF /* beg_20_iCloud-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "beg_20_iCloud-Info.plist"; sourceTree = "<group>"; };
+		174AE93D1B9A2A0F007725BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		174AE93F1B9A2A0F007725BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		174AE9411B9A2A0F007725BF /* beg_20_iCloud-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "beg_20_iCloud-Prefix.pch"; sourceTree = "<group>"; };
+		174AE9421B9A2A0F007725BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		174AE9431B9A2A0F007725BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		174AE9451B9A2A0F007725BF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		174AE94B1B9A2A10007725BF /* beg_20_iCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beg_20_iCloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		174AE94C1B9A2A10007725BF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		174AE9541B9A2A10007725BF /* beg_20_iCloudTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "beg_20_iCloudTests-Info.plist"; sourceTree = "<group>"; };
+		174AE9561B9A2A10007725BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		174AE9581B9A2A10007725BF /* beg_20_iCloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = beg_20_iCloudTests.m; sourceTree = "<group>"; };
+		174AE9621B9A2BFA007725BF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		174AE9671B9A2FD6007725BF /* NoteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteListViewController.h; sourceTree = "<group>"; };
+		174AE9681B9A2FD6007725BF /* NoteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteListViewController.m; sourceTree = "<group>"; };
+		174AE96A1B9A30CB007725BF /* AddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteViewController.h; sourceTree = "<group>"; };
+		174AE96B1B9A30CB007725BF /* AddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		174AE92D1B9A2A0F007725BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174AE9361B9A2A0F007725BF /* CoreGraphics.framework in Frameworks */,
+				174AE9381B9A2A0F007725BF /* UIKit.framework in Frameworks */,
+				174AE9341B9A2A0F007725BF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		174AE9481B9A2A10007725BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174AE94D1B9A2A10007725BF /* XCTest.framework in Frameworks */,
+				174AE94F1B9A2A10007725BF /* UIKit.framework in Frameworks */,
+				174AE94E1B9A2A10007725BF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		174AE9271B9A2A0F007725BF = {
+			isa = PBXGroup;
+			children = (
+				174AE9391B9A2A0F007725BF /* beg_20_iCloud */,
+				174AE9521B9A2A10007725BF /* beg_20_iCloudTests */,
+				174AE9321B9A2A0F007725BF /* Frameworks */,
+				174AE9311B9A2A0F007725BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		174AE9311B9A2A0F007725BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				174AE9301B9A2A0F007725BF /* beg_20_iCloud.app */,
+				174AE94B1B9A2A10007725BF /* beg_20_iCloudTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		174AE9321B9A2A0F007725BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				174AE9331B9A2A0F007725BF /* Foundation.framework */,
+				174AE9351B9A2A0F007725BF /* CoreGraphics.framework */,
+				174AE9371B9A2A0F007725BF /* UIKit.framework */,
+				174AE94C1B9A2A10007725BF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		174AE9391B9A2A0F007725BF /* beg_20_iCloud */ = {
+			isa = PBXGroup;
+			children = (
+				174AE9421B9A2A0F007725BF /* AppDelegate.h */,
+				174AE9431B9A2A0F007725BF /* AppDelegate.m */,
+				174AE9621B9A2BFA007725BF /* Main.storyboard */,
+				174AE9671B9A2FD6007725BF /* NoteListViewController.h */,
+				174AE9681B9A2FD6007725BF /* NoteListViewController.m */,
+				174AE96A1B9A30CB007725BF /* AddNoteViewController.h */,
+				174AE96B1B9A30CB007725BF /* AddNoteViewController.m */,
+				174AE9451B9A2A0F007725BF /* Images.xcassets */,
+				174AE93A1B9A2A0F007725BF /* Supporting Files */,
+			);
+			path = beg_20_iCloud;
+			sourceTree = "<group>";
+		};
+		174AE93A1B9A2A0F007725BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				174AE93B1B9A2A0F007725BF /* beg_20_iCloud-Info.plist */,
+				174AE93C1B9A2A0F007725BF /* InfoPlist.strings */,
+				174AE93F1B9A2A0F007725BF /* main.m */,
+				174AE9411B9A2A0F007725BF /* beg_20_iCloud-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		174AE9521B9A2A10007725BF /* beg_20_iCloudTests */ = {
+			isa = PBXGroup;
+			children = (
+				174AE9581B9A2A10007725BF /* beg_20_iCloudTests.m */,
+				174AE9531B9A2A10007725BF /* Supporting Files */,
+			);
+			path = beg_20_iCloudTests;
+			sourceTree = "<group>";
+		};
+		174AE9531B9A2A10007725BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				174AE9541B9A2A10007725BF /* beg_20_iCloudTests-Info.plist */,
+				174AE9551B9A2A10007725BF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		174AE92F1B9A2A0F007725BF /* beg_20_iCloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 174AE95C1B9A2A10007725BF /* Build configuration list for PBXNativeTarget "beg_20_iCloud" */;
+			buildPhases = (
+				174AE92C1B9A2A0F007725BF /* Sources */,
+				174AE92D1B9A2A0F007725BF /* Frameworks */,
+				174AE92E1B9A2A0F007725BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = beg_20_iCloud;
+			productName = beg_20_iCloud;
+			productReference = 174AE9301B9A2A0F007725BF /* beg_20_iCloud.app */;
+			productType = "com.apple.product-type.application";
+		};
+		174AE94A1B9A2A10007725BF /* beg_20_iCloudTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 174AE95F1B9A2A10007725BF /* Build configuration list for PBXNativeTarget "beg_20_iCloudTests" */;
+			buildPhases = (
+				174AE9471B9A2A10007725BF /* Sources */,
+				174AE9481B9A2A10007725BF /* Frameworks */,
+				174AE9491B9A2A10007725BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				174AE9511B9A2A10007725BF /* PBXTargetDependency */,
+			);
+			name = beg_20_iCloudTests;
+			productName = beg_20_iCloudTests;
+			productReference = 174AE94B1B9A2A10007725BF /* beg_20_iCloudTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		174AE9281B9A2A0F007725BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Alex Izotov";
+				TargetAttributes = {
+					174AE94A1B9A2A10007725BF = {
+						TestTargetID = 174AE92F1B9A2A0F007725BF;
+					};
+				};
+			};
+			buildConfigurationList = 174AE92B1B9A2A0F007725BF /* Build configuration list for PBXProject "beg_20_iCloud" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 174AE9271B9A2A0F007725BF;
+			productRefGroup = 174AE9311B9A2A0F007725BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				174AE92F1B9A2A0F007725BF /* beg_20_iCloud */,
+				174AE94A1B9A2A10007725BF /* beg_20_iCloudTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		174AE92E1B9A2A0F007725BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174AE9631B9A2BFA007725BF /* Main.storyboard in Resources */,
+				174AE93E1B9A2A0F007725BF /* InfoPlist.strings in Resources */,
+				174AE9461B9A2A0F007725BF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		174AE9491B9A2A10007725BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174AE9571B9A2A10007725BF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		174AE92C1B9A2A0F007725BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174AE96C1B9A30CB007725BF /* AddNoteViewController.m in Sources */,
+				174AE9691B9A2FD6007725BF /* NoteListViewController.m in Sources */,
+				174AE9441B9A2A0F007725BF /* AppDelegate.m in Sources */,
+				174AE9401B9A2A0F007725BF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		174AE9471B9A2A10007725BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				174AE9591B9A2A10007725BF /* beg_20_iCloudTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		174AE9511B9A2A10007725BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 174AE92F1B9A2A0F007725BF /* beg_20_iCloud */;
+			targetProxy = 174AE9501B9A2A10007725BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		174AE93C1B9A2A0F007725BF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				174AE93D1B9A2A0F007725BF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		174AE9551B9A2A10007725BF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				174AE9561B9A2A10007725BF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		174AE95A1B9A2A10007725BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		174AE95B1B9A2A10007725BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		174AE95D1B9A2A10007725BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "beg_20_iCloud/beg_20_iCloud-Prefix.pch";
+				INFOPLIST_FILE = "beg_20_iCloud/beg_20_iCloud-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		174AE95E1B9A2A10007725BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "beg_20_iCloud/beg_20_iCloud-Prefix.pch";
+				INFOPLIST_FILE = "beg_20_iCloud/beg_20_iCloud-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		174AE9601B9A2A10007725BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/beg_20_iCloud.app/beg_20_iCloud";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "beg_20_iCloud/beg_20_iCloud-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "beg_20_iCloudTests/beg_20_iCloudTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		174AE9611B9A2A10007725BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/beg_20_iCloud.app/beg_20_iCloud";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "beg_20_iCloud/beg_20_iCloud-Prefix.pch";
+				INFOPLIST_FILE = "beg_20_iCloudTests/beg_20_iCloudTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		174AE92B1B9A2A0F007725BF /* Build configuration list for PBXProject "beg_20_iCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				174AE95A1B9A2A10007725BF /* Debug */,
+				174AE95B1B9A2A10007725BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		174AE95C1B9A2A10007725BF /* Build configuration list for PBXNativeTarget "beg_20_iCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				174AE95D1B9A2A10007725BF /* Debug */,
+				174AE95E1B9A2A10007725BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		174AE95F1B9A2A10007725BF /* Build configuration list for PBXNativeTarget "beg_20_iCloudTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				174AE9601B9A2A10007725BF /* Debug */,
+				174AE9611B9A2A10007725BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 174AE9281B9A2A0F007725BF /* Project object */;
+}
