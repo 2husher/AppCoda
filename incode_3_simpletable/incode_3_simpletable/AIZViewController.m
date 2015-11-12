@@ -8,6 +8,8 @@
 
 #import "AIZViewController.h"
 
+static NSString *TableViewCellIdentifier = @"SimpleTableItem";
+
 @interface AIZViewController () <UITableViewDataSource>
 {
     NSArray *tableData;
@@ -33,6 +35,8 @@
     CGRect frame = CGRectMake(0.0f, 20.0f, self.view.bounds.size.width, self.view.bounds.size.height);
     self.myTableView = [[UITableView alloc] initWithFrame:frame
                                                     style:UITableViewStylePlain];
+    [self.myTableView registerClass:[UITableViewCell class]
+             forCellReuseIdentifier:TableViewCellIdentifier];
 
     self.myTableView.dataSource = self;
 
@@ -52,16 +56,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    UITableViewCell *cell = nil;
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellIdentifier forIndexPath:indexPath];
 
-    if (!cell)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-    }
-
-    cell.textLabel.text = tableData[indexPath.row];
+    cell.textLabel.text  = tableData[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:@"creme_brelee"];
 
     return cell;
