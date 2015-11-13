@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17C37EF41BF66EEC00C7A6B3 /* AIZTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C37EF31BF66EEC00C7A6B3 /* AIZTableData.m */; };
+		17C37EF71BF6739000C7A6B3 /* AIZSimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C37EF61BF6739000C7A6B3 /* AIZSimpleTableCell.m */; };
 		17E445431BF53FC500B994F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E445421BF53FC500B994F8 /* main.m */; };
 		17E445461BF53FC500B994F8 /* AIZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E445451BF53FC500B994F8 /* AIZAppDelegate.m */; };
 		17E445491BF53FC500B994F8 /* AIZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E445481BF53FC500B994F8 /* AIZViewController.m */; };
@@ -29,6 +30,8 @@
 /* Begin PBXFileReference section */
 		17C37EF21BF66EEC00C7A6B3 /* AIZTableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIZTableData.h; sourceTree = "<group>"; };
 		17C37EF31BF66EEC00C7A6B3 /* AIZTableData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIZTableData.m; sourceTree = "<group>"; };
+		17C37EF51BF6739000C7A6B3 /* AIZSimpleTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIZSimpleTableCell.h; sourceTree = "<group>"; };
+		17C37EF61BF6739000C7A6B3 /* AIZSimpleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIZSimpleTableCell.m; sourceTree = "<group>"; };
 		17E4453D1BF53FC500B994F8 /* incode_3_simpletable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = incode_3_simpletable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E445411BF53FC500B994F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E445421BF53FC500B994F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 				17E445451BF53FC500B994F8 /* AIZAppDelegate.m */,
 				17E445471BF53FC500B994F8 /* AIZViewController.h */,
 				17E445481BF53FC500B994F8 /* AIZViewController.m */,
+				17C37EF51BF6739000C7A6B3 /* AIZSimpleTableCell.h */,
+				17C37EF61BF6739000C7A6B3 /* AIZSimpleTableCell.m */,
 				17C37EF21BF66EEC00C7A6B3 /* AIZTableData.h */,
 				17C37EF31BF66EEC00C7A6B3 /* AIZTableData.m */,
 				17E4454D1BF53FC500B994F8 /* Images.xcassets */,
@@ -224,6 +229,7 @@
 				17E445461BF53FC500B994F8 /* AIZAppDelegate.m in Sources */,
 				17E445431BF53FC500B994F8 /* main.m in Sources */,
 				17C37EF41BF66EEC00C7A6B3 /* AIZTableData.m in Sources */,
+				17C37EF71BF6739000C7A6B3 /* AIZSimpleTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

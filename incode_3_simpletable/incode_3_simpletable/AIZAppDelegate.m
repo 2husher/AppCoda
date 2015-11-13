@@ -20,10 +20,13 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     self.AIZViewController = [[AIZViewController alloc]
                               initWithNibName: nil
                               bundle:nil];
+
     self.window.rootViewController = self.AIZViewController;
 
     self.window.backgroundColor = [UIColor whiteColor];
+
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
