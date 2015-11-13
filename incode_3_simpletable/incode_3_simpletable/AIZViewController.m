@@ -7,12 +7,13 @@
 //
 
 #import "AIZViewController.h"
+#import "AIZTableData.h"
 
 static NSString *TableViewCellIdentifier = @"SimpleTableItem";
 
 @interface AIZViewController () <UITableViewDataSource>
 {
-    NSArray *tableData;
+    AIZTableData *tableData;
 }
 
 @property (nonatomic, strong) UITableView *myTableView;
@@ -27,14 +28,19 @@ static NSString *TableViewCellIdentifier = @"SimpleTableItem";
 
     [self addMyTableView];
 
-    tableData = [self fillTableData];
+     tableData = [[AIZTableData alloc] init];
 }
 
 - (void) addMyTableView
 {
-    CGRect frame = CGRectMake(0.0f, 20.0f, self.view.bounds.size.width, self.view.bounds.size.height);
+    CGRect frame = CGRectMake(0.0f,
+                              20.0f,
+                              self.view.bounds.size.width,
+                              self.view.bounds.size.height);
+
     self.myTableView = [[UITableView alloc] initWithFrame:frame
                                                     style:UITableViewStylePlain];
+
     [self.myTableView registerClass:[UITableViewCell class]
              forCellReuseIdentifier:TableViewCellIdentifier];
 
@@ -43,24 +49,19 @@ static NSString *TableViewCellIdentifier = @"SimpleTableItem";
     [self.view addSubview:self.myTableView];
 }
 
-- (NSArray *)fillTableData
-{
-    return [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
-
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [tableData count];
+    return [tableData.data count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = nil;
 
-    cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellIdentifier forIndexPath:indexPath];
+    cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellIdentifier
+                                           forIndexPath:indexPath];
 
-    cell.textLabel.text  = tableData[indexPath.row];
+    cell.textLabel.text  = tableData.data[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:@"creme_brelee"];
 
     return cell;
