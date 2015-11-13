@@ -62,7 +62,7 @@ static NSString *TableViewCellIdentifier = @"SimpleTableItem";
                                            forIndexPath:indexPath];
 
     cell.textLabel.text  = tableData.data[indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:@"creme_brelee"];
+    cell.imageView.image = [UIImage imageNamed:tableData.thumbnails[indexPath.row]];
 
     return cell;
 }

@@ -11,5 +11,6 @@
 @interface AIZTableData : NSObject
 
 @property (nonatomic, strong) NSArray *data;
+@property (nonatomic, strong) NSArray *thumbnails;
 
 @end
