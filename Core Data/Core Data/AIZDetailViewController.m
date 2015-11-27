@@ -7,6 +7,7 @@
 //
 
 #import "AIZDetailViewController.h"
+#import <CoreData/CoreData.h>
 
 @interface AIZDetailViewController () <UITextFieldDelegate>
 
@@ -161,4 +162,53 @@
     [self.view addConstraints:horizontalConstraints];
 }
 
+- (NSManagedObjectContext *)managedObjectContext
+{
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)])
+    {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
+- (void)cancel
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)save
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+
+    NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Device" inManagedObjectContext:context];
+    [newDevice setValue:self.nameTextField.text forKey:@"name"];
+    [newDevice setValue:self.versionTextField.text forKey:@"version"];
+    [newDevice setValue:self.companyTextField.text forKey:@"company"];
+
+    NSError *error = nil;
+    if (![context save:&error])
+    {
+        NSLog(@"Can't save! %@ %@", error, [error localizedDescription]);
+    }
+
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

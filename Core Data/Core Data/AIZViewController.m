@@ -9,16 +9,29 @@
 #import "AIZViewController.h"
 #import "AIZCustomTableViewCell.h"
 #import "AIZDetailViewController.h"
+#import <CoreData/CoreData.h>
 
 static NSString *TableViewCellIdentifier = @"SimpleTableIdentifier";
 
 @interface AIZViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *devices;
 
 @end
 
 @implementation AIZViewController
+
+- (NSManagedObjectContext *)managedObjectContext
+{
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)])
+    {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
 
 - (void)viewDidLoad
 {
@@ -27,6 +40,18 @@ static NSString *TableViewCellIdentifier = @"SimpleTableIdentifier";
     [self addMyTableView];
 
     [self addNavItem];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Device"];
+
+    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+
+    [self.tableView reloadData];
 }
 
 - (void) addMyTableView
@@ -55,7 +80,7 @@ static NSString *TableViewCellIdentifier = @"SimpleTableIdentifier";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return [self.devices count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -65,6 +90,10 @@ static NSString *TableViewCellIdentifier = @"SimpleTableIdentifier";
 
     cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellIdentifier
                                            forIndexPath:indexPath];
+
+    NSManagedObject *device = self.devices[indexPath.row];
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", [device valueForKey:@"name"], [device valueForKey:@"version"]]];
+    [cell.detailTextLabel setText:[device valueForKey:@"company"]];
 
     return cell;
 }
