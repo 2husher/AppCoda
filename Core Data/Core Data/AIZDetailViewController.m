@@ -7,7 +7,6 @@
 //
 
 #import "AIZDetailViewController.h"
-#import <CoreData/CoreData.h>
 
 @interface AIZDetailViewController () <UITextFieldDelegate>
 
@@ -33,6 +32,13 @@
     [self addCompanyTextFieldConstraints];
 
     [self addNavItems];
+
+    if (self.device)
+    {
+        self.nameTextField.text    = [self.device valueForKey:@"name"];
+        self.versionTextField.text = [self.device valueForKey:@"version"];
+        self.companyTextField.text = [self.device valueForKey:@"company"];
+    }
 }
 
 - (void)addNavItems
@@ -182,12 +188,21 @@
 {
     NSManagedObjectContext *context = [self managedObjectContext];
 
-    NSManagedObject *newDevice =
-        [NSEntityDescription insertNewObjectForEntityForName:@"Device"
-                                      inManagedObjectContext:context];
-    [newDevice setValue:self.nameTextField.text forKey:@"name"];
-    [newDevice setValue:self.versionTextField.text forKey:@"version"];
-    [newDevice setValue:self.companyTextField.text forKey:@"company"];
+    if (self.device)
+    {
+        [self.device setValue:self.nameTextField.text forKey:@"name"];
+        [self.device setValue:self.versionTextField.text forKey:@"version"];
+        [self.device setValue:self.companyTextField.text forKey:@"company"];
+    }
+    else
+    {
+        NSManagedObject *newDevice =
+            [NSEntityDescription insertNewObjectForEntityForName:@"Device"
+                                          inManagedObjectContext:context];
+        [newDevice setValue:self.nameTextField.text forKey:@"name"];
+        [newDevice setValue:self.versionTextField.text forKey:@"version"];
+        [newDevice setValue:self.companyTextField.text forKey:@"company"];
+    }
 
     NSError *error = nil;
     if (![context save:&error])

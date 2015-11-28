@@ -80,7 +80,8 @@ static NSString *TableViewCellIdentifier = @"SimpleTableIdentifier";
     self.navigationItem.rightBarButtonItem = bbi;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
 {
     return [self.devices count];
 }
@@ -105,7 +106,15 @@ static NSString *TableViewCellIdentifier = @"SimpleTableIdentifier";
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    AIZDetailViewController *detailVC = [[AIZDetailViewController alloc] init];
 
+    UINavigationController *nc = [[UINavigationController alloc]
+                                  initWithRootViewController:detailVC];
+
+    NSManagedObject *selectedDevice = self.devices[indexPath.row];
+    detailVC.device = selectedDevice;
+    
+    [self presentViewController:nc animated:YES completion:nil];
 }
 
 - (void)addNewDevice
@@ -116,6 +125,29 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                                   initWithRootViewController:detailVC];
 
     [self presentViewController:nc animated:YES completion:nil];
+}
+
+- (void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        [context deleteObject:self.devices[indexPath.row]];
+
+        NSError *error = nil;
+        if (![context save:&error])
+        {
+            NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
+            return;
+        }
+
+        [self.devices removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath]
+                              withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 @end
