@@ -182,7 +182,9 @@
 {
     NSManagedObjectContext *context = [self managedObjectContext];
 
-    NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Device" inManagedObjectContext:context];
+    NSManagedObject *newDevice =
+        [NSEntityDescription insertNewObjectForEntityForName:@"Device"
+                                      inManagedObjectContext:context];
     [newDevice setValue:self.nameTextField.text forKey:@"name"];
     [newDevice setValue:self.versionTextField.text forKey:@"version"];
     [newDevice setValue:self.companyTextField.text forKey:@"company"];

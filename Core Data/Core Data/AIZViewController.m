@@ -47,9 +47,11 @@ static NSString *TableViewCellIdentifier = @"SimpleTableIdentifier";
     [super viewDidAppear:animated];
 
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Device"];
+    NSFetchRequest *fetchRequest =
+        [[NSFetchRequest alloc] initWithEntityName:@"Device"];
 
-    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest
+                                                        error:nil] mutableCopy];
 
     [self.tableView reloadData];
 }
@@ -92,8 +94,10 @@ static NSString *TableViewCellIdentifier = @"SimpleTableIdentifier";
                                            forIndexPath:indexPath];
 
     NSManagedObject *device = self.devices[indexPath.row];
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", [device valueForKey:@"name"], [device valueForKey:@"version"]]];
-    [cell.detailTextLabel setText:[device valueForKey:@"company"]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",
+                           [device valueForKey:@"name"],
+                           [device valueForKey:@"version"]];
+    cell.detailTextLabel.text = [device valueForKey:@"company"];
 
     return cell;
 }
